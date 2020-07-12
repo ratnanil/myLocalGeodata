@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Corine Land Cover | My local geodata stash</title>
+  <meta name="description" content="A description with some sample syntax on my local geodata stash" />
+  <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Corine Land Cover | My local geodata stash" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="A description with some sample syntax on my local geodata stash" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Corine Land Cover | My local geodata stash" />
+  
+  <meta name="twitter:description" content="A description with some sample syntax on my local geodata stash" />
+  
+
+<meta name="author" content="Nils Ratnaweera" />
+
+
+<meta name="date" content="2020-07-11" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="swissboundries3d.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Intro</a></li>
+<li class="chapter" data-level="2" data-path="corine-land-cover.html"><a href="corine-land-cover.html"><i class="fa fa-check"></i><b>2</b> Corine Land Cover</a></li>
+<li class="chapter" data-level="3" data-path="swissboundries3d.html"><a href="swissboundries3d.html"><i class="fa fa-check"></i><b>3</b> Swissboundries3D</a></li>
+<li class="chapter" data-level="4" data-path="tlm-bodenbedeckung.html"><a href="tlm-bodenbedeckung.html"><i class="fa fa-check"></i><b>4</b> TLM Bodenbedeckung</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">My local geodata stash</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="corine-land-cover" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> Corine Land Cover</h1>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1">corine &lt;-<span class="st"> &quot;CorineLandCover/CLC_CH_2018.gpkg&quot;</span></a></code></pre></div>
+<p>There is only one layer available:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">st_layers</span>(corine)</a></code></pre></div>
+<pre><code>## Driver: GPKG 
+## Available layers:
+##    layer_name geometry_type features fields
+## 1 CLC_CH_2018       Polygon    17484     10</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1">conn_corine &lt;-<span class="st"> </span>DBI<span class="op">::</span><span class="kw">dbConnect</span>(RSQLite<span class="op">::</span><span class="kw">SQLite</span>(),corine)</a></code></pre></div>
+<p>What columns / fields do these layers have?</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1"><span class="kw">dbListFields</span>(conn_corine, <span class="st">&quot;CLC_CH_2018&quot;</span>)</a></code></pre></div>
+<pre><code>##  [1] &quot;fid&quot;        &quot;geom&quot;       &quot;OBJECTID&quot;   &quot;ID&quot;         &quot;CODE_18&quot;   
+##  [6] &quot;Area_ha&quot;    &quot;Remark&quot;     &quot;Shape_Leng&quot; &quot;Shape_Area&quot; &quot;category1&quot; 
+## [11] &quot;category2&quot;  &quot;text&quot;</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1"><span class="kw">dbGetQuery</span>(conn_corine, <span class="st">&quot;SELECT DISTINCT CODE_18, category1, category2, text FROM CLC_CH_2018 GROUP BY CODE_18, category1, category2, text&quot;</span>) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb8-2" title="2"><span class="st">  </span><span class="kw">kable</span>()</a></code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align:right;">
+CODE_18
+</th>
+<th style="text-align:left;">
+category1
+</th>
+<th style="text-align:left;">
+category2
+</th>
+<th style="text-align:left;">
+text
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+111
+</td>
+<td style="text-align:left;">
+<ol style="list-style-type: decimal">
+<li>Artificial surfaces
+</td>
+<td style="text-align:left;">
+1.1. Urban fabric
+</td>
+<td style="text-align:left;">
+Continuous urban fabric
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+112
+</td>
+<td style="text-align:left;">
+<ol style="list-style-type: decimal">
+<li>Artificial surfaces
+</td>
+<td style="text-align:left;">
+1.1. Urban fabric
+</td>
+<td style="text-align:left;">
+Discontinuous urban fabric
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+121
+</td>
+<td style="text-align:left;">
+<ol style="list-style-type: decimal">
+<li>Artificial surfaces
+</td>
+<td style="text-align:left;">
+1.2. Industrial, commercial and transport units
+</td>
+<td style="text-align:left;">
+Industrial or commercial units
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+122
+</td>
+<td style="text-align:left;">
+<ol style="list-style-type: decimal">
+<li>Artificial surfaces
+</td>
+<td style="text-align:left;">
+1.2. Industrial, commercial and transport units
+</td>
+<td style="text-align:left;">
+Road and rail networks and associated land
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+123
+</td>
+<td style="text-align:left;">
+<ol style="list-style-type: decimal">
+<li>Artificial surfaces
+</td>
+<td style="text-align:left;">
+1.2. Industrial, commercial and transport units
+</td>
+<td style="text-align:left;">
+Port areas
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+124
+</td>
+<td style="text-align:left;">
+<ol style="list-style-type: decimal">
+<li>Artificial surfaces
+</td>
+<td style="text-align:left;">
+1.2. Industrial, commercial and transport units
+</td>
+<td style="text-align:left;">
+Airports
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+131
+</td>
+<td style="text-align:left;">
+<ol style="list-style-type: decimal">
+<li>Artificial surfaces
+</td>
+<td style="text-align:left;">
+1.3. Mine, dump and construction sites
+</td>
+<td style="text-align:left;">
+Mineral extraction sites
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+132
+</td>
+<td style="text-align:left;">
+<ol style="list-style-type: decimal">
+<li>Artificial surfaces
+</td>
+<td style="text-align:left;">
+1.3. Mine, dump and construction sites
+</td>
+<td style="text-align:left;">
+Dump sites
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+133
+</td>
+<td style="text-align:left;">
+<ol style="list-style-type: decimal">
+<li>Artificial surfaces
+</td>
+<td style="text-align:left;">
+1.3. Mine, dump and construction sites
+</td>
+<td style="text-align:left;">
+Construction sites
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+141
+</td>
+<td style="text-align:left;">
+<ol style="list-style-type: decimal">
+<li>Artificial surfaces
+</td>
+<td style="text-align:left;">
+1.4. Artificial non-agricultural vegetated areas
+</td>
+<td style="text-align:left;">
+Green urban areas
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+142
+</td>
+<td style="text-align:left;">
+<ol style="list-style-type: decimal">
+<li>Artificial surfaces
+</td>
+<td style="text-align:left;">
+1.4. Artificial non-agricultural vegetated areas
+</td>
+<td style="text-align:left;">
+Sport and leisure facilities
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+211
+</td>
+<td style="text-align:left;">
+<ol start="2" style="list-style-type: decimal">
+<li>Agricultural areas
+</td>
+<td style="text-align:left;">
+2.1. Arable land
+</td>
+<td style="text-align:left;">
+Non-irrigated arable land
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+221
+</td>
+<td style="text-align:left;">
+<ol start="2" style="list-style-type: decimal">
+<li>Agricultural areas
+</td>
+<td style="text-align:left;">
+2.2. Permanent crops
+</td>
+<td style="text-align:left;">
+Vineyards
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+222
+</td>
+<td style="text-align:left;">
+<ol start="2" style="list-style-type: decimal">
+<li>Agricultural areas
+</td>
+<td style="text-align:left;">
+2.2. Permanent crops
+</td>
+<td style="text-align:left;">
+Fruit trees and berry plantations
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+231
+</td>
+<td style="text-align:left;">
+<ol start="2" style="list-style-type: decimal">
+<li>Agricultural areas
+</td>
+<td style="text-align:left;">
+2.3. Pastures
+</td>
+<td style="text-align:left;">
+Pastures
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+242
+</td>
+<td style="text-align:left;">
+<ol start="2" style="list-style-type: decimal">
+<li>Agricultural areas
+</td>
+<td style="text-align:left;">
+2.4. Heterogeneous agricultural areas
+</td>
+<td style="text-align:left;">
+Complex cultivation patterns
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+243
+</td>
+<td style="text-align:left;">
+<ol start="2" style="list-style-type: decimal">
+<li>Agricultural areas
+</td>
+<td style="text-align:left;">
+2.4. Heterogeneous agricultural areas
+</td>
+<td style="text-align:left;">
+Land principally occupied by agriculture, with significant areas of
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+311
+</td>
+<td style="text-align:left;">
+<ol start="3" style="list-style-type: decimal">
+<li>Forests and semi-natural areas
+</td>
+<td style="text-align:left;">
+3.1. Forests
+</td>
+<td style="text-align:left;">
+Broad-leaved forest
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+312
+</td>
+<td style="text-align:left;">
+<ol start="3" style="list-style-type: decimal">
+<li>Forests and semi-natural areas
+</td>
+<td style="text-align:left;">
+3.1. Forests
+</td>
+<td style="text-align:left;">
+Coniferous forest
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+313
+</td>
+<td style="text-align:left;">
+<ol start="3" style="list-style-type: decimal">
+<li>Forests and semi-natural areas
+</td>
+<td style="text-align:left;">
+3.1. Forests
+</td>
+<td style="text-align:left;">
+Mixed forest
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+321
+</td>
+<td style="text-align:left;">
+<ol start="3" style="list-style-type: decimal">
+<li>Forests and semi-natural areas
+</td>
+<td style="text-align:left;">
+3.2. Shrub and/or herbaceous vegetation association
+</td>
+<td style="text-align:left;">
+Natural grassland
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+322
+</td>
+<td style="text-align:left;">
+<ol start="3" style="list-style-type: decimal">
+<li>Forests and semi-natural areas
+</td>
+<td style="text-align:left;">
+3.2. Shrub and/or herbaceous vegetation association
+</td>
+<td style="text-align:left;">
+Moors and heathland
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+324
+</td>
+<td style="text-align:left;">
+<ol start="3" style="list-style-type: decimal">
+<li>Forests and semi-natural areas
+</td>
+<td style="text-align:left;">
+3.2. Shrub and/or herbaceous vegetation association
+</td>
+<td style="text-align:left;">
+Transitional woodland shrub
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+331
+</td>
+<td style="text-align:left;">
+<ol start="3" style="list-style-type: decimal">
+<li>Forests and semi-natural areas
+</td>
+<td style="text-align:left;">
+3.3. Open spaces with little or no vegetation
+</td>
+<td style="text-align:left;">
+Beaches, dunes, and sand plains
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+332
+</td>
+<td style="text-align:left;">
+<ol start="3" style="list-style-type: decimal">
+<li>Forests and semi-natural areas
+</td>
+<td style="text-align:left;">
+3.3. Open spaces with little or no vegetation
+</td>
+<td style="text-align:left;">
+Bare rock
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+333
+</td>
+<td style="text-align:left;">
+<ol start="3" style="list-style-type: decimal">
+<li>Forests and semi-natural areas
+</td>
+<td style="text-align:left;">
+3.3. Open spaces with little or no vegetation
+</td>
+<td style="text-align:left;">
+Sparsely vegetated areas
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+334
+</td>
+<td style="text-align:left;">
+<ol start="3" style="list-style-type: decimal">
+<li>Forests and semi-natural areas
+</td>
+<td style="text-align:left;">
+3.3. Open spaces with little or no vegetation
+</td>
+<td style="text-align:left;">
+Burnt area
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+334
+</td>
+<td style="text-align:left;">
+<ol start="3" style="list-style-type: decimal">
+<li>Forests and semi-natural areas
+</td>
+<td style="text-align:left;">
+3.3. Open spaces with little or no vegetation
+</td>
+<td style="text-align:left;">
+Burnt areas
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+335
+</td>
+<td style="text-align:left;">
+<ol start="3" style="list-style-type: decimal">
+<li>Forests and semi-natural areas
+</td>
+<td style="text-align:left;">
+3.3. Open spaces with little or no vegetation
+</td>
+<td style="text-align:left;">
+Glaciers and perpetual snow plains
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+411
+</td>
+<td style="text-align:left;">
+<ol start="4" style="list-style-type: decimal">
+<li>Wetlands
+</td>
+<td style="text-align:left;">
+4.1. Inland wetlands
+</td>
+<td style="text-align:left;">
+Inland marshes
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+412
+</td>
+<td style="text-align:left;">
+<ol start="4" style="list-style-type: decimal">
+<li>Wetlands
+</td>
+<td style="text-align:left;">
+4.1. Inland wetlands
+</td>
+<td style="text-align:left;">
+Peatbogs
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+511
+</td>
+<td style="text-align:left;">
+<ol start="5" style="list-style-type: decimal">
+<li>Water bodies
+</td>
+<td style="text-align:left;">
+5.1. Inland waters
+</td>
+<td style="text-align:left;">
+Water courses
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+512
+</td>
+<td style="text-align:left;">
+<ol start="5" style="list-style-type: decimal">
+<li>Water bodies
+</td>
+<td style="text-align:left;">
+5.1. Inland waters
+</td>
+<td style="text-align:left;">
+Water bodies
+</td>
+</tr>
+</tbody>
+</table></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol>
+<p>What other tables are available in this Geopackage / SQLite Database?</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" title="1"><span class="kw">dbListTables</span>(conn_corine)</a></code></pre></div>
+<pre><code>##  [1] &quot;CLC_CH_2018&quot;                   &quot;gpkg_contents&quot;                
+##  [3] &quot;gpkg_extensions&quot;               &quot;gpkg_geometry_columns&quot;        
+##  [5] &quot;gpkg_metadata&quot;                 &quot;gpkg_metadata_reference&quot;      
+##  [7] &quot;gpkg_ogr_contents&quot;             &quot;gpkg_spatial_ref_sys&quot;         
+##  [9] &quot;gpkg_tile_matrix&quot;              &quot;gpkg_tile_matrix_set&quot;         
+## [11] &quot;rtree_CLC_CH_2018_geom&quot;        &quot;rtree_CLC_CH_2018_geom_node&quot;  
+## [13] &quot;rtree_CLC_CH_2018_geom_parent&quot; &quot;rtree_CLC_CH_2018_geom_rowid&quot; 
+## [15] &quot;sqlite_sequence&quot;</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" title="1">corine_sf &lt;-<span class="st"> </span><span class="kw">read_sf</span>(corine)</a>
+<a class="sourceLine" id="cb11-2" title="2"></a>
+<a class="sourceLine" id="cb11-3" title="3"><span class="kw">ggplot</span>(corine_sf) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb11-4" title="4"><span class="st">  </span><span class="kw">geom_sf</span>(<span class="kw">aes</span>(<span class="dt">fill =</span> category1), <span class="dt">colour =</span> <span class="ot">NA</span>)</a></code></pre></div>
+<p><img src="Geodata_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" title="1"><span class="kw">ggplot</span>(corine_sf) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb12-2" title="2"><span class="st">  </span><span class="kw">geom_sf</span>(<span class="kw">aes</span>(<span class="dt">fill =</span> category2), <span class="dt">colour =</span> <span class="ot">NA</span>)</a></code></pre></div>
+<p><img src="Geodata_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="swissboundries3d.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

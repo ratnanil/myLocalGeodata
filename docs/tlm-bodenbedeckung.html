@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 TLM Bodenbedeckung | My local geodata stash</title>
+  <meta name="description" content="A description with some sample syntax on my local geodata stash" />
+  <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 TLM Bodenbedeckung | My local geodata stash" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="A description with some sample syntax on my local geodata stash" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 TLM Bodenbedeckung | My local geodata stash" />
+  
+  <meta name="twitter:description" content="A description with some sample syntax on my local geodata stash" />
+  
+
+<meta name="author" content="Nils Ratnaweera" />
+
+
+<meta name="date" content="2020-07-11" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="swissboundries3d.html"/>
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Intro</a></li>
+<li class="chapter" data-level="2" data-path="corine-land-cover.html"><a href="corine-land-cover.html"><i class="fa fa-check"></i><b>2</b> Corine Land Cover</a></li>
+<li class="chapter" data-level="3" data-path="swissboundries3d.html"><a href="swissboundries3d.html"><i class="fa fa-check"></i><b>3</b> Swissboundries3D</a></li>
+<li class="chapter" data-level="4" data-path="tlm-bodenbedeckung.html"><a href="tlm-bodenbedeckung.html"><i class="fa fa-check"></i><b>4</b> TLM Bodenbedeckung</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">My local geodata stash</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="tlm-bodenbedeckung" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> TLM Bodenbedeckung</h1>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb35-1" title="1">bodenbedeckung &lt;-<span class="st"> &quot;C:/Users/rata/Geodata/TLM/bodenbedeckung/bodenbedeckung_2018.gpkg&quot;</span></a>
+<a class="sourceLine" id="cb35-2" title="2"></a>
+<a class="sourceLine" id="cb35-3" title="3">conn_bodenbeckung &lt;-<span class="st"> </span>DBI<span class="op">::</span><span class="kw">dbConnect</span>(RSQLite<span class="op">::</span><span class="kw">SQLite</span>(),bodenbedeckung)</a></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb36-1" title="1"><span class="kw">dbListTables</span>(conn_bodenbeckung)</a></code></pre></div>
+<pre><code>##  [1] &quot;TLM_BODENBEDECKUNG&quot;                  
+##  [2] &quot;gpkg_contents&quot;                       
+##  [3] &quot;gpkg_extensions&quot;                     
+##  [4] &quot;gpkg_geometry_columns&quot;               
+##  [5] &quot;gpkg_metadata&quot;                       
+##  [6] &quot;gpkg_metadata_reference&quot;             
+##  [7] &quot;gpkg_spatial_ref_sys&quot;                
+##  [8] &quot;gpkg_tile_matrix&quot;                    
+##  [9] &quot;gpkg_tile_matrix_set&quot;                
+## [10] &quot;rtree_TLM_BODENBEDECKUNG_geom&quot;       
+## [11] &quot;rtree_TLM_BODENBEDECKUNG_geom_node&quot;  
+## [12] &quot;rtree_TLM_BODENBEDECKUNG_geom_parent&quot;
+## [13] &quot;rtree_TLM_BODENBEDECKUNG_geom_rowid&quot; 
+## [14] &quot;sqlite_sequence&quot;</code></pre>
+<p>What are columns in “TLM_BODENBEDECKUNG”?</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb38-1" title="1"><span class="kw">dbListFields</span>(conn_bodenbeckung, <span class="st">&quot;TLM_BODENBEDECKUNG&quot;</span>)</a></code></pre></div>
+<pre><code>##  [1] &quot;id&quot;                 &quot;geom&quot;               &quot;OBJECTID&quot;          
+##  [4] &quot;UUID&quot;               &quot;DATUM_AENDERUNG&quot;    &quot;DATUM_ERSTELLUNG&quot;  
+##  [7] &quot;ERSTELLUNG_JAHR&quot;    &quot;ERSTELLUNG_MONAT&quot;   &quot;REVISION_JAHR&quot;     
+## [10] &quot;REVISION_MONAT&quot;     &quot;GRUND_AENDERUNG&quot;    &quot;HERKUNFT&quot;          
+## [13] &quot;HERKUNFT_JAHR&quot;      &quot;HERKUNFT_MONAT&quot;     &quot;REVISION_QUALITAET&quot;
+## [16] &quot;OBJEKTART&quot;          &quot;SHAPE_Length&quot;       &quot;SHAPE_Area&quot;</code></pre>
+<p>The most important column is <code>OBJEKTART</code>. Possible values are:</p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb40-1" title="1"><span class="kw">dbGetQuery</span>(conn_bodenbeckung, <span class="st">&quot;SELECT OBJEKTART, COUNT(*) as number_of_features FROM TLM_BODENBEDECKUNG GROUP bY OBJEKTART&quot;</span>)</a></code></pre></div>
+<pre><code>##            OBJEKTART number_of_features
+## 1               Fels             183833
+## 2       Feuchtgebiet              13293
+## 3    Fliessgewaesser               1045
+## 4       Gebueschwald              29293
+## 5          Gletscher               5996
+## 6      Lockergestein             132734
+## 7 Stehende Gewaesser              16776
+## 8               Wald             105860
+## 9         Wald offen              16378</code></pre>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb42-1" title="1">TLM_see &lt;-<span class="st"> </span><span class="kw">st_read</span>(bodenbedeckung, <span class="st">&quot;TLM_BODENBEDECKUNG&quot;</span>, <span class="dt">query =</span> <span class="st">&quot;SELECT * from TLM_BODENBEDECKUNG WHERE OBJEKTART == &#39;Stehende Gewaesser&#39; AND SHAPE_Area &gt; 40000000&quot;</span>)</a></code></pre></div>
+<pre><code>## Reading layer `TLM_BODENBEDECKUNG&#39; from data source `C:\Users\rata\Geodata\TLM\bodenbedeckung\bodenbedeckung_2018.gpkg&#39; using driver `GPKG&#39;
+## Simple feature collection with 9 features and 16 fields
+## geometry type:  POLYGON
+## dimension:      XYZ
+## bbox:           xmin: 2500391 ymin: 1064011 xmax: 2774371 ymax: 1297554
+## z_range:        zmin: 193.393 zmax: 557.677
+## CRS:            2056</code></pre>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb44-1" title="1"><span class="kw">ggplot</span>(TLM_see) <span class="op">+</span><span class="st"> </span><span class="kw">geom_sf</span>()</a></code></pre></div>
+<p><img src="Geodata_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb45-1" title="1">engadin_bounding &lt;-<span class="st"> &quot;&#39;POLYGON(( 2814113.8209 1186621.2645, 2824505.1432 1192051.0384, 2825612.8825 1189931.0834, 2815221.5603 1184501.3095, 2814113.8209 1186621.2645 ))&#39;&quot;</span></a>
+<a class="sourceLine" id="cb45-2" title="2"></a>
+<a class="sourceLine" id="cb45-3" title="3">myquery &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;select * from TLM_BODENBEDECKUNG as bodenbedeckung, (select PolygonFromText(&quot;</span>,engadin_bounding,<span class="st">&quot;, 2056) as geom) sel where st_intersects(bodenbedeckung.geom, sel.geom)&quot;</span>)</a>
+<a class="sourceLine" id="cb45-4" title="4"></a>
+<a class="sourceLine" id="cb45-5" title="5"></a>
+<a class="sourceLine" id="cb45-6" title="6">myquery</a></code></pre></div>
+<pre><code>## [1] &quot;select * from TLM_BODENBEDECKUNG as bodenbedeckung, (select PolygonFromText(&#39;POLYGON(( 2814113.8209 1186621.2645, 2824505.1432 1192051.0384, 2825612.8825 1189931.0834, 2815221.5603 1184501.3095, 2814113.8209 1186621.2645 ))&#39;, 2056) as geom) sel where st_intersects(bodenbedeckung.geom, sel.geom)&quot;</code></pre>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb47-1" title="1">engadin &lt;-<span class="st"> </span><span class="kw">st_read</span>(bodenbedeckung, <span class="st">&quot;TLM_BODENBEDECKUNG&quot;</span>, <span class="dt">query =</span> myquery)</a></code></pre></div>
+<pre><code>## Reading layer `TLM_BODENBEDECKUNG&#39; from data source `C:\Users\rata\Geodata\TLM\bodenbedeckung\bodenbedeckung_2018.gpkg&#39; using driver `GPKG&#39;
+## Simple feature collection with 378 features and 16 fields
+## geometry type:  POLYGON
+## dimension:      XYZ
+## bbox:           xmin: 2785540 ymin: 1153262 xmax: 2832409 ymax: 1202888
+## z_range:        zmin: 981.21 zmax: 2308.518
+## CRS:            2056</code></pre>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb49-1" title="1"><span class="kw">ggplot</span>(engadin) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb49-2" title="2"><span class="st">  </span><span class="kw">geom_sf</span>(<span class="kw">aes</span>(<span class="dt">fill =</span> OBJEKTART), <span class="dt">colour =</span> <span class="ot">NA</span>) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb49-3" title="3"><span class="st">  </span><span class="kw">theme</span>(<span class="dt">legend.position =</span> <span class="st">&quot;none&quot;</span>)</a></code></pre></div>
+<p><img src="Geodata_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="swissboundries3d.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
